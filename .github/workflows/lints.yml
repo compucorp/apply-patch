@@ -1,0 +1,17 @@
+name: Lints
+
+on: [pull_request, push]
+
+jobs:
+  run-linter:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Install dependencies
+      run: npm i
+
+    - name: Run lint
+      run: ./node_modules/.bin/eslint 'src/**.js'

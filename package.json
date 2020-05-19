@@ -1,0 +1,36 @@
+{
+  "name": "apply-patches-action",
+  "version": "1.0.0",
+  "description": "Apply patches from Github Repository",
+  "main": "dist/index.js",
+  "scripts": {
+    "lint": "eslint 'src/**.js' --fix",
+    "build": "ncc build src/main.js",
+    "precommit": "npm run build && git add dist/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/compucorp/apply-patch.git"
+  },
+  "keywords": [
+    "GitHub",
+    "Actions",
+    "JavaScript"
+  ],
+  "author": "Erawat Chamanont",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/compucorp/apply-patch/issues"
+  },
+  "homepage": "https://github.com/compucorp/apply-patch#readme",
+  "dependencies": {
+    "@actions/core": "^1.2.4",
+    "@actions/exec": "^1.0.4",
+    "@actions/github": "^2.2.0"
+  },
+  "devDependencies": {
+    "@zeit/ncc": "^0.21.1",
+    "eslint": "^7.0.0",
+    "jest": "^26.0.1"
+  }
+}
