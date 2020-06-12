@@ -1,7 +1,7 @@
 {
-  "name": "apply-patches-action",
+  "name": "apply-patch-action",
   "version": "1.0.0",
-  "description": "Apply patches from Github Repository",
+  "description": "Apply a patch from Github compare commits",
   "main": "dist/index.js",
   "scripts": {
     "lint": "eslint 'src/**.js' --fix",

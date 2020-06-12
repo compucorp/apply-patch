@@ -1,12 +1,12 @@
 name: 'Apply patch'
-description: 'Apply patch is created for applying a patch generated from Github compare commits'
+description: 'An action for applying a patch generated from Github compare commits'
 inputs:
   repo: 
     description: 'The repository owner/name. For example, compucorp/civicrm-core'
     required: true
     default:
   version:  
-      description: 'A tag version or a branch name of the base branch'
+      description: 'A tag or a branch name of the base branch'
       required: true
       default:
   path:  
