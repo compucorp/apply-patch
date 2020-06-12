@@ -1,0 +1,26 @@
+name: "Tests"
+
+on: [pull_request, push]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    env: 
+      CIVICRM_VERSION: 5.9.beta1
+    
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+
+    - name: Build CiviCRM for testing
+      run: git clone -b $CIVICRM_VERSION --depth 1 https://github.com/compucorp/civicrm-core.git
+   
+    - name: Run test
+      uses: ./
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        repo: compucorp/civicrm-core
+        version: ${{ env.CIVICRM_VERSION }}
+        path: civicrm-core
