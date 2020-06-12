@@ -14,4 +14,4 @@ jobs:
       run: npm i
 
     - name: Run lint
-      run: ./node_modules/.bin/eslint 'src/**.js'
+      run: npx eslint 'src/**.js'
