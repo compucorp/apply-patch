@@ -1,3 +1,3 @@
-const run = require('./apply-patche');
+const run = require('./apply-patch');
 
 run();
